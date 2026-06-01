@@ -1,7 +1,3 @@
-/* =========================
-   HABILIDADES
-========================= */
-
 .habilidades {
   position: relative;
   overflow: hidden;
@@ -17,11 +13,9 @@
   height: 360px;
 
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(121, 169, 209, 0.14),
-    transparent 68%
-  );
+  background: radial-gradient(circle,
+      rgba(121, 169, 209, 0.14),
+      transparent 68%);
 
   pointer-events: none;
 }
@@ -51,14 +45,12 @@
   line-height: 1.85;
 }
 
-/* Grid dos cards */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
 }
 
-/* Card */
 .info-card {
   position: relative;
   min-height: 330px;
@@ -71,11 +63,9 @@
   border-radius: 24px;
 
   background:
-    linear-gradient(
-      180deg,
+    linear-gradient(180deg,
       rgba(255, 255, 255, 0.065),
-      rgba(255, 255, 255, 0.025)
-    );
+      rgba(255, 255, 255, 0.025));
 
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.06),
@@ -96,11 +86,9 @@
   inset: 0;
 
   background:
-    radial-gradient(
-      circle at top right,
+    radial-gradient(circle at top right,
       rgba(121, 169, 209, 0.16),
-      transparent 38%
-    );
+      transparent 38%);
 
   opacity: 0;
   transition: opacity var(--transition-default);
@@ -116,12 +104,10 @@
 
   height: 1px;
 
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(220, 233, 245, 0.55),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(220, 233, 245, 0.55),
+      transparent);
 
   opacity: 0.26;
 }
@@ -131,11 +117,9 @@
   border-color: rgba(165, 198, 223, 0.28);
 
   background:
-    linear-gradient(
-      180deg,
+    linear-gradient(180deg,
       rgba(255, 255, 255, 0.085),
-      rgba(255, 255, 255, 0.035)
-    );
+      rgba(255, 255, 255, 0.035));
 
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.08),
@@ -147,7 +131,6 @@
   opacity: 1;
 }
 
-/* Número do card */
 .card-number {
   display: inline-flex;
   align-items: center;
@@ -172,7 +155,6 @@
     0 0 20px rgba(121, 169, 209, 0.08);
 }
 
-/* Conteúdo do card */
 .info-card h3 {
   margin: 0 0 14px;
 
@@ -190,7 +172,6 @@
   line-height: 1.75;
 }
 
-/* Lista de habilidades */
 .skill-list {
   display: flex;
   flex-wrap: wrap;
@@ -222,54 +203,4 @@
   border-color: rgba(165, 198, 223, 0.26);
   background: rgba(255, 255, 255, 0.055);
   color: #ffffff;
-}
-
-/* =========================
-   RESPONSIVO
-========================= */
-
-@media (max-width: 1024px) {
-  .cards-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .info-card {
-    min-height: 310px;
-  }
-}
-
-@media (max-width: 680px) {
-  .habilidades h2 {
-    font-size: clamp(1.9rem, 9vw, 2.5rem);
-  }
-
-  .section-description {
-    margin-bottom: 36px;
-    font-size: 0.98rem;
-  }
-
-  .cards-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .info-card {
-    min-height: auto;
-    padding: 24px 22px;
-    border-radius: 20px;
-  }
-
-  .card-number {
-    width: 38px;
-    height: 38px;
-    margin-bottom: 22px;
-  }
-
-  .info-card h3 {
-    font-size: 1.25rem;
-  }
-
-  .info-card p {
-    font-size: 0.94rem;
-  }
 }
