@@ -1,0 +1,270 @@
+/* =========================
+   SOBRE
+========================= */
+
+.sobre {
+  position: relative;
+  overflow: hidden;
+}
+
+.sobre::before {
+  content: "";
+  position: absolute;
+  top: 8%;
+  left: -140px;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(121, 169, 209, 0.12),
+    transparent 68%
+  );
+
+  pointer-events: none;
+}
+
+.sobre::after {
+  content: "";
+  position: absolute;
+  right: -180px;
+  bottom: 6%;
+
+  width: 460px;
+  height: 460px;
+
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(216, 181, 108, 0.09),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+.sobre .container {
+  position: relative;
+  z-index: 1;
+}
+
+.sobre h2 {
+  max-width: 860px;
+  margin: 0 0 22px;
+
+  color: var(--text-primary);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.12;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+/* Card principal do conteúdo */
+.sobre-content {
+  position: relative;
+
+  max-width: 980px;
+  margin-top: 46px;
+  padding: 34px 32px;
+
+  border: 1px solid var(--border-soft);
+  border-radius: 26px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.065),
+      rgba(255, 255, 255, 0.026)
+    );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 24px 55px rgba(0, 0, 0, 0.24);
+
+  overflow: hidden;
+
+  transition:
+    transform var(--transition-default),
+    border-color var(--transition-default),
+    background var(--transition-default),
+    box-shadow var(--transition-default);
+}
+
+.sobre-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(121, 169, 209, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(216, 181, 108, 0.08),
+      transparent 38%
+    );
+
+  opacity: 0;
+  transition: opacity var(--transition-default);
+  pointer-events: none;
+}
+
+.sobre-content::after {
+  content: "";
+  position: absolute;
+  left: 32px;
+  right: 32px;
+  bottom: 0;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(220, 233, 245, 0.55),
+    transparent
+  );
+
+  opacity: 0.26;
+}
+
+.sobre-content:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(165, 198, 223, 0.28);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.085),
+      rgba(255, 255, 255, 0.035)
+    );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 30px 70px rgba(0, 0, 0, 0.34),
+    0 0 34px rgba(121, 169, 209, 0.08);
+}
+
+.sobre-content:hover::before {
+  opacity: 1;
+}
+
+/* Texto */
+.sobre-content p {
+  position: relative;
+  z-index: 1;
+
+  max-width: 900px;
+  margin: 0 0 22px;
+
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.sobre-content p:last-child {
+  margin-bottom: 0;
+}
+
+.sobre-content strong {
+  color: var(--accent-ice);
+  font-weight: 700;
+}
+
+/* Lista rápida de formação/atuação */
+.sobre-highlights {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+
+  margin: 0 0 30px;
+}
+
+.sobre-highlight {
+  padding: 18px 18px;
+
+  border: 1px solid rgba(165, 198, 223, 0.16);
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  transition:
+    border-color var(--transition-default),
+    background var(--transition-default),
+    transform var(--transition-default);
+}
+
+.sobre-highlight:hover {
+  transform: translateY(-3px);
+  border-color: rgba(165, 198, 223, 0.28);
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.sobre-highlight span {
+  display: block;
+  margin-bottom: 8px;
+
+  color: var(--accent-ice);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sobre-highlight strong {
+  display: block;
+
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 980px) {
+  .sobre-content {
+    max-width: 100%;
+  }
+
+  .sobre-highlights {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .sobre h2 {
+    font-size: clamp(1.9rem, 9vw, 2.5rem);
+  }
+
+  .sobre-content {
+    margin-top: 36px;
+    padding: 24px 22px;
+    border-radius: 22px;
+  }
+
+  .sobre-content::after {
+    left: 22px;
+    right: 22px;
+  }
+
+  .sobre-content p {
+    font-size: 0.95rem;
+    line-height: 1.78;
+  }
+
+  .sobre-highlight {
+    padding: 16px;
+    border-radius: 16px;
+  }
+}
