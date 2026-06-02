@@ -1,0 +1,38 @@
+.site-footer {
+  position: relative;
+  padding: 24px 20px 18px;
+  background: transparent;
+  color: #f4f8ef;
+}
+
+.site-footer::before {
+  display: none;
+}
+
+.footer-brand p,
+.footer-message p,
+.footer-bottom p {
+  color: rgba(244, 248, 239, 0.72);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.footer-bottom {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding-top: 18px;
+  border-top: 1px solid rgba(244, 248, 239, 0.12);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.82rem;
+}
+
+.footer-ia {
+  max-width: 680px;
+  font-size: 0.76rem;
+  line-height: 1.4;
+  color: rgba(244, 248, 239, 0.58);
+  text-align: right;
+}
